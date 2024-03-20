@@ -24,7 +24,7 @@ namespace MinimalApi.Repositories
             return null;
         }
 
-        public async Task<Client> GetAsync(Guid id)
+        public async Task<Client?> GetAsync(Guid id)
         {
             var result = await dbContext.Clients.FindAsync(id);
             return result;
